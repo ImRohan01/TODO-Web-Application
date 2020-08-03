@@ -110,8 +110,7 @@ form button:hover {
 
 select {
   -webkit-appearance: none;
-  -moz-appearnce: none;
-  appearance: none;
+  -moz-appearance: none;
   outline: none;
   border: none;
 }
@@ -137,11 +136,24 @@ select {
   right: 0;
   padding: 1rem;
   pointer-events: none;
-  transition: all 0.3s ease; 
+  transition: all 0.3s ease;
 }
 
 .select:hover::after {
   color: #49cc49;
   background: white;
 
+}
+
+form button, .trash-button, .complete-button {
+   outline:none;
+}
+
+form button::-moz-focus-inner, .trash-button::-moz-focus-inner, .complete-button::-moz-focus-inner {
+   border: 0;
+}
+
+select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
 }
