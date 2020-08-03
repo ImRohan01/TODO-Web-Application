@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Fredoka One', cursive;
+  min-height: 100vh;
+}
+
+header {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+header, form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input, form button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background: white;
+}
+
+form button {
+  background: white;
+  color: #49cc49;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  color: white;
+  background: #49cc49;
+}
+
+.todo-container {
+  display: flex;
+  font-family: 'Ubuntu', sans-serif;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+
+.todo {
+  margin: 0.5rem;
+  background: white;
+  color: black;
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.todo li{
+  padding: 0rem 0.5rem;
+  flex: 1;
+}
+
+.trash-button, .complete-button {
+  background: red;
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.complete-button{
+  background: #49cc49;
+}
+
+.complete-button:hover{
+  background: grey;
+  color: #49cc49;
+}
+
+.trash-button:hover{
+  background: grey;
+  color: red;
+}
+
+.fa-trash, .fa-check{
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearnce: none;
+  appearance: none;
+  outline: none;
+  border: none;
+}
+
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+select {
+  color: black;
+  width: 10rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.select:after {
+  content: "\25BC";
+  position: absolute;
+  background: #49cc49;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
+  transition: all 0.3s ease; 
+}
+
+.select:hover::after {
+  color: #49cc49;
+  background: white;
+
+}
